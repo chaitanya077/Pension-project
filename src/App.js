@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
+import SignIn from './views/SignIn';
+import { useState } from 'react';
+import SignUp from './views/SignUp';
+// import ResponsiveAppBar from './views/ResponsiveAppBar';
+import Navbar from './views/Navbar';
 function App() {
+  const[signin,setSignin] = useState(true);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* {signin ? <SignIn/> : <SignUp/>} */}
+    <Navbar/>
+
     </div>
   );
 }
